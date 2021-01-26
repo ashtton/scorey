@@ -8,5 +8,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ScoreyBoard {
+    /**
+     * Scoreboard name
+     * Note: This is code based only
+     */
     String name();
 }
