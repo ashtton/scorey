@@ -40,7 +40,7 @@ public class Scorey {
                     if(scoreyPlayer == null) scoreyPlayer = new ScoreyPlayer(player.getUniqueId());
 
                     List<String> scoreboard = ScoreyPlayer.getScoreboard(player);
-                    int i = 0;
+                    int i = 1;
                     for(String line : scoreboard) {
                         Team team = scoreyPlayer.getTeams().get(i);
 
