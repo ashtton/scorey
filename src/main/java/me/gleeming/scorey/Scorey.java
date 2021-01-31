@@ -47,6 +47,8 @@ public class Scorey {
                         if(team == null) team = scoreyPlayer.getBukkitScoreboard().registerNewTeam(UUID.randomUUID().toString().substring(0, 6));
                         if(team.getEntries().size() == 0) team.addEntry(ChatColor.values()[new Random().nextInt(ChatColor.values().length)].toString() + ChatColor.values()[new Random().nextInt(ChatColor.values().length)].toString());
 
+                        if(line.length() > 32) line = line.substring(0, 32);
+
                         if(line.length() > 16) {
                             team.setPrefix(ChatColor.translateAlternateColorCodes('&', line.substring(0, 16).endsWith("&") ? line.substring(0, 15) : line.substring(0, 16)));
                             team.setSuffix(ChatColor.translateAlternateColorCodes('&', ChatColor.getLastColors(team.getPrefix()) + (line.substring(0, 16).endsWith("&") ? line.substring(15) : line.substring(16))));
