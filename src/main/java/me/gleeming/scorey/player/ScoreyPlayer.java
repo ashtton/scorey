@@ -41,6 +41,15 @@ public class ScoreyPlayer {
     }
 
     /**
+     * Gets a team name that hasn't been used yet
+     */
+    public String getRandomTeamName() {
+        String attempt = UUID.randomUUID().toString().substring(0, 16);
+        if(bukkitScoreboard.getTeam(attempt) == null) return attempt;
+        return getRandomTeamName();
+    }
+
+    /**
      * Update a players scoreboard
      *
      * @param uuid Player Unique ID

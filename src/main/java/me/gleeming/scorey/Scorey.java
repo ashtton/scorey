@@ -44,7 +44,7 @@ public class Scorey {
                     for(String line : scoreboard) {
                         Team team = scoreyPlayer.getTeams().get(i);
 
-                        if(team == null) team = scoreyPlayer.getBukkitScoreboard().registerNewTeam(UUID.randomUUID().toString().substring(0, 6));
+                        if(team == null) team = scoreyPlayer.getBukkitScoreboard().registerNewTeam(scoreyPlayer.getRandomTeamName());
                         if(team.getEntries().size() == 0) team.addEntry(ChatColor.values()[new Random().nextInt(ChatColor.values().length)].toString() + ChatColor.values()[new Random().nextInt(ChatColor.values().length)].toString());
 
                         if(line.length() > 32) line = line.substring(0, 32);
