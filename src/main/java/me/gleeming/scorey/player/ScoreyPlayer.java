@@ -32,7 +32,7 @@ public class ScoreyPlayer {
         this.scoreboard = defaultScoreboard;
 
         bukkitScoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
-        titleObjective = bukkitScoreboard.registerNewObjective("scorey", "dummy");
+        titleObjective = bukkitScoreboard.registerNewObjective(UUID.randomUUID().toString().substring(0, 16), "dummy");
         titleObjective.setDisplaySlot(DisplaySlot.SIDEBAR);
         titleObjective.setDisplayName(ChatColor.translateAlternateColorCodes('&', Scorey.getInstance().getHelper().getTitle()));
 
