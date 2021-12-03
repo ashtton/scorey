@@ -28,13 +28,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>athen-studios</id>
-            <url>https://repo.athenstudios.net/repository/athen-studios-minecraft/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <repositories>
         <repository>
             <id>spigot-repo</id>
